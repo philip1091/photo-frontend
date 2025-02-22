@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'font-regular';
+  src: url('./fonts/PorscheNext-Regular.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-bold';
+  src: url('./fonts/PorscheNext-Bold.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-thin';
+  src: url('./fonts/PorscheNext-Thin.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'font-regular', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font_bold{
+  font-family: 'font-bold', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.font_thin{
+  font-family: 'font-thin', sans-serif;
+}
+
+.image-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.image-item {
+  flex: 1 1 auto;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
