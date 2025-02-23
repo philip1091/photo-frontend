@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'font-regular';
-  src: url('./fonts/PorscheNext-Regular.otf') format('opentype'); /* Change format if needed */
+  src: url('./fonts/PorscheNext-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'font-bold';
-  src: url('./fonts/PorscheNext-Bold.otf') format('opentype'); /* Change format if needed */
+  src: url('./fonts/PorscheNext-Bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'font-thin';
-  src: url('./fonts/PorscheNext-Thin.otf') format('opentype'); /* Change format if needed */
+  src: url('./fonts/PorscheNext-Thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
