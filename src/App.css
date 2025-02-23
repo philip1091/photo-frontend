@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'font-regular';
+  src: url('./fonts/PorscheNext-Regular.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-bold';
+  src: url('./fonts/PorscheNext-Bold.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font-thin';
+  src: url('./fonts/PorscheNext-Thin.otf') format('opentype'); /* Change format if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'font-regular', sans-serif;
+}
+
+.font_bold{
+  font-family: 'font-bold', sans-serif;
+}
+
+.font_thin{
+  font-family: 'font-thin', sans-serif;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.image-item {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.image-item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
