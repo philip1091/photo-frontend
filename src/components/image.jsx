@@ -10,8 +10,4 @@ function Image({url = ""}) {
   )
 }
 
-<<<<<<< HEAD
 export default Image;
-=======
-export default Image
->>>>>>> d4844c45b40ab3c840d59d32592ac7f9f3df6f44
