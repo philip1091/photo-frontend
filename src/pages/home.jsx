@@ -5,10 +5,7 @@ import ImageGrid from "../components/imageGrid"
 function Home() {
   const images = useLoaderData();
   return (
-    <div className="container">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="w-full mx-auto px-[15px] my-[15px]">
       <ImageGrid images={images} />
     </div>
   )
