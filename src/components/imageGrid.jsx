@@ -1,16 +1,16 @@
-import React from 'react'
 import Image from './image'
-function ImageGrid({images,imagesPerRow}) {
+import React, { useState, useEffect } from "react";
+function ImageGrid({images,size}) {
 
   const shuffleArray = (arr) => {
     return [...arr].sort(() => Math.random() - 0.5);
   };
 
-  const shuffledImages = shuffleArray(images.data);
+  // const shuffledImages = shuffleArray(images.data);
   return (
     <div className="image-grid">
-      {shuffledImages.map((img, index) => (
-        <Image url={img.image} key={index} />
+      {images.data.map((img, index) => (
+        <Image url={img.image} key={index} size={size} />
       ))}
     </div>
   )
