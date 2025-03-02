@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import Personal from "./pages/personal";
 import Commissioned from "./pages/commissioned";
 import NavBar from "./components/NavBar";
+import NavSize from "./components/NavSize";
 import { loader } from "./loader";
 
 const homeUrl = "/api/images";
@@ -44,7 +45,8 @@ function Layout() {
   return (
     <>
       <NavBar currentPath={currentPath} scrollY={scrollY} size={size} display={(dis)=>{setsize(dis)}} />
-      <Outlet context={{ size,setscrollY }} />
+      <NavSize scrollY={scrollY} size={size} display={(dis)=>{setsize(dis)}} />
+      <Outlet  context={{ size,setscrollY }} />
     </>
   );
 }

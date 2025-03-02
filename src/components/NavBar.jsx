@@ -2,16 +2,16 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";
 const navigation = [
-  { name: 'Overview', href: '/', current: true },
-  { name: 'Personal', href: '/personal', current: false },
-  { name: 'Commissioned', href: '/commissioned', current: false },
-  { name: 'About', href: '/#', current: false },
+  { name: 'Overview', href: '/'},
+  { name: 'Personal', href: '/personal' },
+  { name: 'Commissioned', href: '/commissioned' },
+  { name: 'About', href: '/#' },
 ]
 
 const size = [
-  {size: 50, current: false, display:"large"},
-  {size: 200, current: true, display:"medium"},
-  {size: 500, current: false, display:"small"},
+  {size: 50, display:"large"},
+  {size: 200, display:"medium"},
+  {size: 500, display:"small"},
 ]
 
 function classNames(...classes) {

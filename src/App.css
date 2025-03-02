@@ -51,7 +51,14 @@ body {
 
 .navBackground{
   backdrop-filter: blur(15px);
-  background-color: #00000040;
+  background-color: #00000046;
+}
+
+
+.navBackground-side{
+  backdrop-filter: blur(15px);
+  background-color: #00000046;
+  border-radius: 10px 0 0 10px ;
 }
 
 
