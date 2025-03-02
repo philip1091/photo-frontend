@@ -11,8 +11,8 @@ function classNames(...classes) {
 }
 const NavBottom = (props) => {
   return (
-    <div className="md:hidden block left-1/2 transform -translate-x-1/2 navBackground-btm fixed bottom-1 w-[60vw]">
-      <div className="flex space-x-4 justify-around">
+    <div className="md:hidden block left-1/2 transform -translate-x-1/2 navBackground-btm fixed bottom-1 w-[90vw] sm:w-[60vw]">
+      <div className="flex justify-around">
         {navigation.map((item) => (
           <Link
             key={item.name}
