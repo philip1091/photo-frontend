@@ -39,11 +39,12 @@ const router = createBrowserRouter([
 function Layout() {
   const location = useLocation();
   const currentPath = location.pathname;
-  const [size, setsize] = useState("medium")
+  const [size, setsize] = useState("medium");
+  const [scrollY, setscrollY] = useState(0);
   return (
     <>
-      <NavBar currentPath={currentPath} size={size} display={(dis)=>{setsize(dis)}} />
-      <Outlet context={{ size }} />
+      <NavBar currentPath={currentPath} scrollY={scrollY} size={size} display={(dis)=>{setsize(dis)}} />
+      <Outlet context={{ size,setscrollY }} />
     </>
   );
 }

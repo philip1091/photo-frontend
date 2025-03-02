@@ -19,22 +19,21 @@ function classNames(...classes) {
 }
 
 export default function NavBar(props) {
-
   const handleSizeChange = (display) => {
     props.display(display)
   }
 
   return (
-    <Disclosure as="nav" className="bg-black/10">
-      <div className="mx-auto w-full px-[15px] h-[100px]">
+    <Disclosure as="nav" className="">
+      <div className="mx-auto w-full px-[15px] h-[70px] fixed top-0 left-0 navBackground">
         <div className="relative flex h-full items-center justify-center md:justify-between">
 
-          <div className="absolute left-1/2 transform -translate-x-1/2 md:left-0 md:translate-x-0 top-[50px] -translate-y-1/2">
+          <div className="absolute left-1/2 transform -translate-x-1/2 md:left-0 md:translate-x-0">
           <Link to="/">
             <img
               alt="Logo"
-              src="/logo/2.png"
-              className="h-[80px] w-[200px]"
+              src={props.scrollY < 24 ? "/logo/b.png" : "/logo/w.png"}
+              className="w-[265px] "
             />
           </Link>
           </div>
@@ -47,8 +46,9 @@ export default function NavBar(props) {
                   key={item.name}
                   to={item.href}
                   className={classNames(
-                    item.href === props.currentPath ? 'text-black' : 'text-gray-400 ',
-                    ' px-3 py-2 text-sm font-medium',
+                    item.href === props.currentPath ? 'underline' : '',
+                    props.scrollY < 24 ? "text-gray-800" : "text-gray-100",
+                    ' px-3 py-2 text-sm ',
                   )}
                 >
                   {item.name}
@@ -64,7 +64,8 @@ export default function NavBar(props) {
                   <div
                     key={i}
                     className={classNames(
-                      props.size === item.display ? 'text-black' : 'text-gray-400 ',
+                      props.size === item.display ? 'underline' : '',
+                      props.scrollY < 24 ? "text-gray-800" : "text-gray-100",
                       ' text-sm px-2 cursor-pointer',
                     )}
                     onClick={()=>{handleSizeChange(item.display)}}

@@ -48,3 +48,13 @@ body {
   width: auto;
   object-fit: contain;
 }
+
+.navBackground{
+  backdrop-filter: blur(15px);
+  background-color: #00000040;
+}
+
+
+.transition-custom{
+  transition: all 0.3s ease;
+}
