@@ -60,6 +60,11 @@ body {
   background-color: #00000046;
   border-radius: 10px 0 0 10px ;
 }
+.navBackground-btm{
+  backdrop-filter: blur(15px);
+  background-color: #00000046;
+  border-radius: 10px;
+}
 
 
 .transition-custom{
