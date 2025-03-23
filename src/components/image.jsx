@@ -1,30 +1,26 @@
-import React, { useState, useEffect } from "react";
-function Image({url,size}) {
-  const [viewSelected, setViewSelected] = useState("90px");
+import React, { useState, useEffect, useMemo } from "react";
+import LazyLoad from 'react-lazyload';
+import { useOutletContext } from "react-router-dom";
+
+
+const Image = React.memo(({ url }) => {
+  const { size } = useOutletContext();
   const [isLandscape, setIsLandscape] = useState(false);
   useEffect(() => {
-    if (size === "small") {
-      setViewSelected("60px")
-    }else if (size === "medium") {
-      setViewSelected("90px")
-    } else if (size === "large") {
-      setViewSelected("120px")
-    }
     if (!url) return;
-
     const img = new window.Image();
-    img.src = `storage/${url}`;
+    img.src = `${url}`;
 
     img.onload = () => {
       setIsLandscape(img.width > img.height);
     };
   }, [size])
   return(
-    <div className={`image-item ${isLandscape ? "landscape" : "portrait"}`}
-      style={{height: `${viewSelected}`}}>
-      <img src={`storage/${url}`} />
+    <div height={size} className={`image-item ${isLandscape ? "landscape" : "portrait"}`}
+        style={{height: `${size}`}}>
+        <img src={`${url}`} loading="eager"/>
     </div>
   )
-}
+})
 
 export default Image;

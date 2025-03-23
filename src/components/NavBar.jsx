@@ -1,5 +1,4 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";
 const navigation = [
   { name: 'Overview', href: '/'},
@@ -9,9 +8,9 @@ const navigation = [
 ]
 
 const size = [
-  {size: 50, display:"large"},
-  {size: 200, display:"medium"},
-  {size: 500, display:"small"},
+  {size: 50, display:"120px"},
+  {size: 200, display:"90px"},
+  {size: 500, display:"60px"},
 ]
 
 function classNames(...classes) {
@@ -19,6 +18,7 @@ function classNames(...classes) {
 }
 
 export default function NavBar(props) {
+
   const handleSizeChange = (display) => {
     props.display(display)
   }

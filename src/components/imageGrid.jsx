@@ -1,15 +1,23 @@
 import Image from './image'
-import React, { useState, useEffect } from "react";
-function ImageGrid({images,size}) {
+import React, { useState, useEffect,useMemo } from "react";
 
+function ImageGrid({images}) {
+  const baseUrl = `${window.origin}/storage`;
+
+  const preloadedImages = useMemo(() => {
+    return images.data.map((img) => ({
+      original: img.compressed_image,
+      url: `${baseUrl}/${img.compressed_image}`,
+    }));
+  }, [images.data]);
 
   return (
     <div className="image-grid">
-      {images.data.map((img, index) => (
-        <Image url={img.image} key={index} size={size} />
+      {preloadedImages.map((img, index) => (
+          <Image url={img.url} key={index} />
       ))}
     </div>
   )
 }
 
-export default ImageGrid
+export default React.memo(ImageGrid)

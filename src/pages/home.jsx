@@ -5,11 +5,12 @@ import { useOutletContext } from "react-router-dom";
 
 function Home(props) {
   const images = useLoaderData();
-  const { size } = useOutletContext();
+  // const { size } = useOutletContext();
   const { setscrollY } = useOutletContext();
   useEffect(() => {
-    const handleScroll = () => {
+    console.log("RENDERED HOME");
 
+    const handleScroll = () => {
       setscrollY(window.scrollY)
     };
 
@@ -21,7 +22,7 @@ function Home(props) {
   }, []);
   return (
     <div className="w-full mx-auto px-[15px] mb-[15px] mt-[95px]">
-      <ImageGrid images={images} size={size} />
+      <ImageGrid images={images} />
     </div>
   )
 }
