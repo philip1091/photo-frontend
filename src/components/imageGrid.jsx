@@ -14,7 +14,7 @@ function ImageGrid({images}) {
   return (
     <div className="image-grid">
       {preloadedImages.map((img, index) => (
-          <Image url={img.url} key={index} />
+          <Image url={img.url} key={index} index={index}/>
       ))}
     </div>
   )

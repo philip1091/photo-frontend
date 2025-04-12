@@ -8,7 +8,6 @@ function Home(props) {
   // const { size } = useOutletContext();
   const { setscrollY } = useOutletContext();
   useEffect(() => {
-    console.log("RENDERED HOME");
 
     const handleScroll = () => {
       setscrollY(window.scrollY)
